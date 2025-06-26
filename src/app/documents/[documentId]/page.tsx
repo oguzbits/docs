@@ -1,17 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface DocumentIdPageProps {
-  params: Promise<{ documentId: string }>
+  params: Promise<{ documentId: string }>;
 }
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { documentId } = await params;
 
-  return (
-    <div>
-      DocumentIdPage: {documentId}
-    </div>
-  );
+  return <div>DocumentIdPage: {documentId}</div>;
 };
 
 export default DocumentIdPage;

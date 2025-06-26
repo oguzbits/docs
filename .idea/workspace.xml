@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/documents/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/documents/page.tsx" afterDir="false" />
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Add UI primitive components with Radix UI and custom styles.">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +38,9 @@
     &quot;accountId&quot;: &quot;6dd94f12-503e-4368-860f-7bc24dba2688&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -56,16 +57,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/oguz/Desktop/dev/docs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "/Users/oguz/Desktop/dev/docs/node_modules/eslint",
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "prettierjs.PrettierConfiguration.Package": "/Users/oguz/Desktop/dev/docs/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/oguz/Desktop/dev/docs/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -88,6 +93,21 @@
       <recent name="$PROJECT_DIR$/src/app/(auth)/sign-in" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,7 +129,8 @@
       <workItem from="1750282254313" duration="872000" />
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
-      <workItem from="1750970384091" duration="2865000" />
+      <workItem from="1750970384091" duration="3421000" />
+      <workItem from="1750975544685" duration="462000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -119,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750970731902</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add UI primitive components with Radix UI and custom styles.">
+      <option name="closed" value="true" />
+      <created>1750975036813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750975036813</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +167,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations." />
+    <MESSAGE value="Add UI primitive components with Radix UI and custom styles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UI primitive components with Radix UI and custom styles." />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface DocumentsLayoutProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface DocumentsLayoutProps {
 const DocumentsLayout = ({ children }: DocumentsLayoutProps) => {
   return (
     <div className="flex flex-col gap-y-4">
-      <nav className="w-full">Document navbar</nav>
+      <nav className="w-full bg-red-500">Document navbar</nav>
       {children}
     </div>
   );
