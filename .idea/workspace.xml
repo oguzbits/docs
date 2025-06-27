@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`.">
-      <change afterPath="$PROJECT_DIR$/public/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document-input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/toolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +126,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="15712000" />
+      <workItem from="1750975544685" duration="16987000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -189,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750985495252</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`.">
+      <option name="closed" value="true" />
+      <created>1751032275042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751032275042</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
