@@ -12,7 +12,7 @@ export const Navbar = () => {
           <Image src="/logo.svg" alt="Docs Logo" width={36} height={36} />
 
           <h3 className="hidden text-2xl font-extrabold text-indigo-600 md:block">
-            DOCS
+            Docs
           </h3>
         </div>
       </Link>

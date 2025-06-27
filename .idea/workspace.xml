@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Remove unused hooks and SVG assets, add new assets and components for document templates.&#10;&#10;- Delete unused `use-mobile.tsx`, `use-toast.ts`, and old SVG assets.&#10;- Add new SVG assets for document templates: `software-proposal.svg`, `resume.svg`.&#10;- Create `Navbar` component under `src/app/(home)` for enhanced navigation.">
-      <change afterPath="$PROJECT_DIR$/convex/auth.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/convex/documents.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/convex/schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/document-menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/document-row.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/documents-table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/convex-client-provider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fullscreen-loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/remove-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/rename-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convex/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/auth.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convex/documents.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/documents.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/template-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/template-gallery.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +132,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="24685000" />
+      <workItem from="1750975544685" duration="27072000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -226,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751039631363</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar.">
+      <option name="closed" value="true" />
+      <created>1751056273233</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751056273233</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +250,7 @@
     <MESSAGE value="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`." />
     <MESSAGE value="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions." />
     <MESSAGE value="Remove unused hooks and SVG assets, add new assets and components for document templates.&#10;&#10;- Delete unused `use-mobile.tsx`, `use-toast.ts`, and old SVG assets.&#10;- Add new SVG assets for document templates: `software-proposal.svg`, `resume.svg`.&#10;- Create `Navbar` component under `src/app/(home)` for enhanced navigation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused hooks and SVG assets, add new assets and components for document templates.&#10;&#10;- Delete unused `use-mobile.tsx`, `use-toast.ts`, and old SVG assets.&#10;- Add new SVG assets for document templates: `software-proposal.svg`, `resume.svg`.&#10;- Create `Navbar` component under `src/app/(home)` for enhanced navigation." />
+    <MESSAGE value="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar." />
   </component>
 </project>
