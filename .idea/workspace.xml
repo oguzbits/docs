@@ -4,9 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions.">
+      <change afterPath="$PROJECT_DIR$/public/blank-document.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/business-letter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/cover-letter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/letter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project-proposal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resume.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/software-proposal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/search-input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/template-gallery.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/templates.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/use-debounce.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/use-search-param.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-mobile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-toast.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +77,7 @@
     "js.debugger.nextJs.config.created.server": "true",
     "js.linters.configure.manually.selectedeslint": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/src/app/documents/[documentId]",
+    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,11 +103,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/documents/[documentId]" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/app/(home)" />
+      <recent name="$PROJECT_DIR$/src/app/documents/[documentId]" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(auth)/sign-up" />
       <recent name="$PROJECT_DIR$/src/app/(auth)/sign-in" />
     </key>
@@ -126,7 +152,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="16987000" />
+      <workItem from="1750975544685" duration="19989000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -192,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751032275042</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions.">
+      <option name="closed" value="true" />
+      <created>1751033703287</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751033703287</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +252,7 @@
     <MESSAGE value="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page." />
     <MESSAGE value="Add Ruler component for adjustable margins in TipTap editor.&#10;&#10;- Implement `Ruler` for visual margin adjustment via draggable markers.&#10;- Integrate `Ruler` into the editor interface.&#10;- Update dependencies to include `react-icons` for marker icons." />
     <MESSAGE value="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrate Navbar into document page for enhanced user interaction.&#10;&#10;- Implement `Navbar` with improved layout for file, edit, and format menus.&#10;- Add `DocumentInput` component for document title display.&#10;- Include `logo.svg` for branding and navigation.&#10;- Update `Toolbar` styling and integrate within the `Navbar`." />
+    <MESSAGE value="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions." />
   </component>
 </project>
