@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useMutation } from 'convex/react';
-import { ConvexError } from 'convex/values';
-import { type PropsWithChildren, useState } from 'react';
-import { toast } from 'sonner';
+import { useMutation } from "convex/react";
+import { ConvexError } from "convex/values";
+import { type PropsWithChildren, useState } from "react";
+import { toast } from "sonner";
 
-import { api } from '@/../convex/_generated/api';
-import type { Id } from '@/../convex/_generated/dataModel';
-import { Button } from '@/components/ui/button';
+import { api } from "@/../convex/_generated/api";
+import type { Id } from "@/../convex/_generated/dataModel";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -17,15 +17,19 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 interface RenameDialogProps {
-  documentId: Id<'documents'>;
+  documentId: Id<"documents">;
   initialTitle: string;
 }
 
-export const RenameDialog = ({ documentId, initialTitle, children }: PropsWithChildren<RenameDialogProps>) => {
+export const RenameDialog = ({
+  documentId,
+  initialTitle,
+  children,
+}: PropsWithChildren<RenameDialogProps>) => {
   const update = useMutation(api.documents.updateById);
   const [isUpdating, setIsUpdating] = useState(false);
   const [title, setTitle] = useState(initialTitle);
@@ -35,10 +39,11 @@ export const RenameDialog = ({ documentId, initialTitle, children }: PropsWithCh
     e.preventDefault();
     setIsUpdating(true);
 
-    update({ id: documentId, title: title.trim() || 'Untitled Document' })
+    update({ id: documentId, title: title?.trim() || "Untitled Document" })
       .then(() => setOpen(false))
       .catch((error) => {
-        const errorMessage = error instanceof ConvexError ? error.data : 'Something went wrong!';
+        const errorMessage =
+          error instanceof ConvexError ? error.data : "Something went wrong!";
         toast.error(errorMessage);
       })
       .finally(() => setIsUpdating(false));
@@ -53,7 +58,9 @@ export const RenameDialog = ({ documentId, initialTitle, children }: PropsWithCh
           <DialogHeader>
             <DialogTitle>Rename document</DialogTitle>
 
-            <DialogDescription>Enter a new name for this document.</DialogDescription>
+            <DialogDescription>
+              Enter a new name for this document.
+            </DialogDescription>
           </DialogHeader>
 
           <div className="my-4">
@@ -67,12 +74,21 @@ export const RenameDialog = ({ documentId, initialTitle, children }: PropsWithCh
 
           <DialogFooter>
             <DialogClose asChild>
-              <Button type="button" variant="outline" disabled={isUpdating} onClick={(e) => e.stopPropagation()}>
+              <Button
+                type="button"
+                variant="outline"
+                disabled={isUpdating}
+                onClick={(e) => e.stopPropagation()}
+              >
                 Cancel
               </Button>
             </DialogClose>
 
-            <Button type="submit" disabled={isUpdating || !title.trim()} onClick={(e) => e.stopPropagation()}>
+            <Button
+              type="submit"
+              disabled={isUpdating || !title?.trim()}
+              onClick={(e) => e.stopPropagation()}
+            >
               Save
             </Button>
           </DialogFooter>

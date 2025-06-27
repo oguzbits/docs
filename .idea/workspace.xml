@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation.">
+      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convex/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/auth.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convex/documents.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/documents.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/template-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/template-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/document-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fullscreen-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fullscreen-loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/remove-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/remove-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rename-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rename-dialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
     "js.debugger.nextJs.config.created.server": "true",
     "js.linters.configure.manually.selectedeslint": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/convex",
+    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/src/app/documents/[documentId]",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,11 +87,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/documents/[documentId]" />
       <recent name="$PROJECT_DIR$/convex" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/(home)" />
@@ -132,7 +136,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="27072000" />
+      <workItem from="1750975544685" duration="30624000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -222,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751056273233</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation.">
+      <option name="closed" value="true" />
+      <created>1751058939144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751058939144</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +263,7 @@
     <MESSAGE value="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions." />
     <MESSAGE value="Remove unused hooks and SVG assets, add new assets and components for document templates.&#10;&#10;- Delete unused `use-mobile.tsx`, `use-toast.ts`, and old SVG assets.&#10;- Add new SVG assets for document templates: `software-proposal.svg`, `resume.svg`.&#10;- Create `Navbar` component under `src/app/(home)` for enhanced navigation." />
     <MESSAGE value="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar." />
+    <MESSAGE value="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation." />
   </component>
 </project>
