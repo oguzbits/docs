@@ -74,9 +74,7 @@ const Editor = () => {
         autolink: true,
         defaultProtocol: "https",
       }),
-      StarterKit.configure({
-        history: false,
-      }),
+      StarterKit,
       Table.configure({
         resizable: true,
       }),

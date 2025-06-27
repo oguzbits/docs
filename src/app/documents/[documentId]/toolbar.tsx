@@ -605,13 +605,13 @@ export const Toolbar = () => {
       {
         label: "Undo",
         icon: Undo2Icon,
-        /*disabled: !editor?.can()?.undo(),*/
+        disabled: !editor?.can()?.undo(),
         onClick: () => editor?.commands.undo(),
       },
       {
         label: "Redo",
         icon: Redo2Icon,
-        /*disabled: !editor?.can().redo(),*/
+        disabled: !editor?.can().redo(),
         onClick: () => editor?.commands.redo(),
       },
       {
