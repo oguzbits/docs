@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-
-import { links } from "@/config";
 
 import { SearchInput } from "./search-input";
+import { UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
   return (
@@ -22,14 +20,7 @@ export const Navbar = () => {
       <SearchInput />
 
       <div className="flex items-center gap-3 pl-6">
-        <Link
-          href={links.sourceCode}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="transition-opacity hover:opacity-75"
-        >
-          <FaGithub className="size-6" />
-        </Link>
+        <UserButton />
       </div>
     </nav>
   );
