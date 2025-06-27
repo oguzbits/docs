@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Update TipTap editor implementation with additional extensions and improved table handling.&#10;&#10;- Add new TipTap extensions (Image, Table, TaskList, and resize capabilities).&#10;- Update dependencies for TipTap-related packages in `package.json` and `package-lock.json`.">
-      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/toolbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/editor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/extensions/font-size.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/extensions/line-height.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/use-editor-store.ts" afterDir="false" />
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page.">
+      <change afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/ruler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,7 @@
     "js.debugger.nextJs.config.created.server": "true",
     "js.linters.configure.manually.selectedeslint": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/src",
+    "last_opened_file_path": "/Users/oguz/Desktop/dev/docs/src/app/documents/[documentId]",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,6 +65,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Debug",
     "prettierjs.PrettierConfiguration.Package": "/Users/oguz/Desktop/dev/docs/node_modules/prettier",
     "settings.editor.selected.configurable": "database.query.execution",
     "ts.external.directory.path": "/Users/oguz/Desktop/dev/docs/node_modules/typescript/lib",
@@ -88,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/documents/[documentId]" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -133,7 +129,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="7949000" />
+      <workItem from="1750975544685" duration="9548000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -175,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750980536796</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page.">
+      <option name="closed" value="true" />
+      <created>1750983715663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750983715663</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +202,7 @@
     <MESSAGE value="Enhance project setup with Prettier, ESLint, and TailwindCSS configurations. Optimize imports and improve formatting across components." />
     <MESSAGE value="Integrate TipTap editor into document page and simplify DocumentsLayout structure. Add TipTap dependencies." />
     <MESSAGE value="Update TipTap editor implementation with additional extensions and improved table handling.&#10;&#10;- Add new TipTap extensions (Image, Table, TaskList, and resize capabilities).&#10;- Update dependencies for TipTap-related packages in `package.json` and `package-lock.json`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update TipTap editor implementation with additional extensions and improved table handling.&#10;&#10;- Add new TipTap extensions (Image, Table, TaskList, and resize capabilities).&#10;- Update dependencies for TipTap-related packages in `package.json` and `package-lock.json`." />
+    <MESSAGE value="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page." />
   </component>
 </project>
