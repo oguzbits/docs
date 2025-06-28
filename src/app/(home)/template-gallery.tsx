@@ -26,7 +26,10 @@ export const TemplateGallery = () => {
     setIsCreating(true);
 
     create({ title, initialContent })
-      .then((documentId) => router.push(`/documents/${documentId}`))
+      .then((documentId) => {
+        toast.info("Document created");
+        router.push(`/documents/${documentId}`);
+      })
       .catch((error) => {
         const errorMessage =
           error instanceof ConvexError ? error.data : "Something went wrong!";

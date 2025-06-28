@@ -17,6 +17,8 @@ interface DocumentProps {
 export const Document = ({ preloadedDocument, roomId }: DocumentProps) => {
   const document = usePreloadedQuery(preloadedDocument);
 
+  console.log({ document });
+
   return (
     <Room roomId={roomId}>
       <div className="min-h-screen bg-[#fafbfd]">

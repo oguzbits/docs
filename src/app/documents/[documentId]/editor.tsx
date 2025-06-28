@@ -115,7 +115,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
       TextStyle,
       Underline,
     ],
-    immediatelyRender: false,
+    immediatelyRender: true,
   });
 
   return (

@@ -24,6 +24,8 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
     { token },
   );
 
+  console.log("preloadedDocument", preloadedDocument);
+
   return <Document preloadedDocument={preloadedDocument} roomId={documentId} />;
 };
 export default DocumentIdPage;
