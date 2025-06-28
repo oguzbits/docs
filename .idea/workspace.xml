@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/threads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/threads.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +29,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -132,7 +126,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="67772000" />
+      <workItem from="1750975544685" duration="68099000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -294,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751146600557</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI.">
+      <option name="closed" value="true" />
+      <created>1751149781101</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1751149781101</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +335,8 @@
     <MESSAGE value="Refactor `RemoveDialog` to use `useRouter` for navigation and clean up redundant props.&#10;&#10;- Remove the `onSuccess` callback in `RemoveDialog` and replace it with direct navigation using `useRouter`.&#10;- Update `navbar.tsx` to align with the refactored `RemoveDialog` API." />
     <MESSAGE value="Refactor `documents.ts` to use constants for table names and improve defaults.&#10;&#10;- Replace hardcoded table name strings with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` during document creation to prevent undefined entries." />
     <MESSAGE value="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant." />
+    <MESSAGE value="Refactor document-related components and enhance real-time collaboration features&#10;&#10;- Update `actions.ts` to improve organization ID handling in Clerk user list fetch.&#10;- Enhance `threads.tsx` with `ClientSideSuspense` for better loading states and modularize `ThreadsList`.&#10;- Simplify `editor.tsx` by removing unused `FloatingToolbar` and cleaning up imports." />
+    <MESSAGE value="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
   </component>
 </project>
