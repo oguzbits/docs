@@ -57,10 +57,10 @@ export const Navbar = ({ data }: NavbarProps) => {
   const router = useRouter();
   const { editor } = useEditorStore();
 
-  const mutate = useMutation(api.documents.create);
+  const create = useMutation(api.documents.create);
 
   const onNewDocument = () => {
-    mutate({
+    create({
       title: "Untitled Document",
       initialContent: "",
     })

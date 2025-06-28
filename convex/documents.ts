@@ -3,6 +3,8 @@ import { ConvexError, v } from "convex/values";
 
 import { mutation, query } from "./_generated/server";
 
+const DOCUMENTS_TABLE = "documents";
+
 export const create = mutation({
   args: {
     title: v.optional(v.string()),
@@ -17,11 +19,11 @@ export const create = mutation({
       | string
       | undefined;
 
-    const documentId = await ctx.db.insert("documents", {
+    const documentId = await ctx.db.insert(DOCUMENTS_TABLE, {
       title: title ?? "Untitled Document",
       ownerId: user.subject,
       organizationId,
-      initialContent,
+      initialContent: initialContent ?? "",
     });
 
     return documentId;
@@ -45,7 +47,7 @@ export const get = query({
     // search within organization
     if (search && organizationId) {
       return await ctx.db
-        .query("documents")
+        .query(DOCUMENTS_TABLE)
         .withSearchIndex("search_title", (q) =>
           q.search("title", search).eq("organizationId", organizationId),
         )
@@ -55,7 +57,7 @@ export const get = query({
     // search within personal
     if (search) {
       return await ctx.db
-        .query("documents")
+        .query(DOCUMENTS_TABLE)
         .withSearchIndex("search_title", (q) =>
           q.search("title", search).eq("ownerId", user.subject),
         )
@@ -65,7 +67,7 @@ export const get = query({
     // all organization docs
     if (organizationId) {
       return await ctx.db
-        .query("documents")
+        .query(DOCUMENTS_TABLE)
         .withIndex("by_organization_id", (q) =>
           q.eq("organizationId", organizationId),
         )
@@ -74,14 +76,14 @@ export const get = query({
 
     // all personal docs
     return await ctx.db
-      .query("documents")
+      .query(DOCUMENTS_TABLE)
       .withIndex("by_owner_id", (q) => q.eq("ownerId", user.subject))
       .paginate(paginationOpts);
   },
 });
 
 export const getByIds = query({
-  args: { ids: v.array(v.id("documents")) },
+  args: { ids: v.array(v.id(DOCUMENTS_TABLE)) },
   handler: async (ctx, { ids }) => {
     const documents = [];
 
@@ -100,14 +102,14 @@ export const getByIds = query({
 });
 
 export const getById = query({
-  args: { id: v.id("documents") },
+  args: { id: v.id(DOCUMENTS_TABLE) },
   handler: async (ctx, { id }) => {
     return await ctx.db.get(id);
   },
 });
 
 export const removeById = mutation({
-  args: { id: v.id("documents") },
+  args: { id: v.id(DOCUMENTS_TABLE) },
   handler: async (ctx, { id }) => {
     const user = await ctx.auth.getUserIdentity();
 
@@ -133,7 +135,7 @@ export const removeById = mutation({
 });
 
 export const updateById = mutation({
-  args: { id: v.id("documents"), title: v.string() },
+  args: { id: v.id(DOCUMENTS_TABLE), title: v.string() },
   handler: async (ctx, { id, title }) => {
     const user = await ctx.auth.getUserIdentity();
 
