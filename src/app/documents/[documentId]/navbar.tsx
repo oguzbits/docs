@@ -45,7 +45,9 @@ import {
 } from "@/components/ui/menubar";
 import { useEditorStore } from "@/store/use-editor-store";
 
+import { Avatars } from "./avatars";
 import { DocumentInput } from "./document-input";
+import { Inbox } from "./inbox";
 
 interface NavbarProps {
   data: Doc<"documents">;
@@ -132,7 +134,7 @@ export const Navbar = ({ data }: NavbarProps) => {
         </Link>
 
         <div className="flex flex-col">
-          <DocumentInput title={data?.title} id={data?._id} />
+          <DocumentInput title={data.title} id={data._id} />
 
           <div className="flex">
             <Menubar className="h-auto border-none bg-transparent p-0 shadow-none">
@@ -173,10 +175,7 @@ export const Navbar = ({ data }: NavbarProps) => {
 
                   <MenubarSeparator />
 
-                  <RenameDialog
-                    documentId={data?._id}
-                    initialTitle={data?.title}
-                  >
+                  <RenameDialog documentId={data._id} initialTitle={data.title}>
                     <MenubarItem
                       onClick={(e) => e.stopPropagation()}
                       onSelect={(e) => e.preventDefault()}
@@ -186,7 +185,7 @@ export const Navbar = ({ data }: NavbarProps) => {
                     </MenubarItem>
                   </RenameDialog>
 
-                  <RemoveDialog documentId={data?._id}>
+                  <RemoveDialog documentId={data._id}>
                     <MenubarItem
                       onClick={(e) => e.stopPropagation()}
                       onSelect={(e) => e.preventDefault()}
@@ -320,6 +319,9 @@ export const Navbar = ({ data }: NavbarProps) => {
       </div>
 
       <div className="flex items-center gap-3 pl-6">
+        <Avatars />
+        <Inbox />
+
         <OrganizationSwitcher
           afterCreateOrganizationUrl="/"
           afterLeaveOrganizationUrl="/"

@@ -1,3 +1,4 @@
+import { useMutation, useStorage } from "@liveblocks/react/suspense";
 import { useRef, useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
 
@@ -13,8 +14,17 @@ const markers = Array.from({ length: editorRulerMarkers }, (_, i) => i);
 export const Ruler = () => {
   const rulerRef = useRef<HTMLDivElement>(null);
 
-  const [leftMargin, setLeftMargin] = useState(editorMargin);
-  const [rightMargin, setRightMargin] = useState(editorMargin);
+  const leftMargin = useStorage((root) => root.leftMargin ?? editorMargin);
+  const setLeftMargin = useMutation(
+    ({ storage }, position: number) => storage.set("leftMargin", position),
+    [],
+  );
+
+  const rightMargin = useStorage((root) => root.rightMargin ?? editorMargin);
+  const setRightMargin = useMutation(
+    ({ storage }, position: number) => storage.set("rightMargin", position),
+    [],
+  );
 
   const [isDraggingLeft, setIsDraggingLeft] = useState(false);
   const [isDraggingRight, setIsDraggingRight] = useState(false);
@@ -152,7 +162,7 @@ const Maker = ({
 }: MakerProps) => {
   return (
     <div
-      className="group absolute top-0 z-[5] -ml-2 h-full w-4 cursor-ew-resize"
+      className="group absolute top-0 z-[5] -ml-4 h-full w-8 p-2 cursor-ew-resize"
       style={{ [isLeft ? "left" : "right"]: `${position}px` }}
       onMouseDown={onMouseDown}
       onDoubleClick={onDoubleClick}

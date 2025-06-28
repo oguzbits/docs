@@ -11,7 +11,7 @@ export const Navbar = () => {
         <div className="flex shrink-0 items-center gap-3">
           <Image src="/logo.svg" alt="Docs Logo" width={36} height={36} />
 
-          <h3 className="hidden text-xl font-semibold md:block">Docs</h3>
+          <h3 className="hidden text-2xl font-normal md:block">Docs</h3>
         </div>
       </Link>
 
