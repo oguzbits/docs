@@ -115,7 +115,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
       TextStyle,
       Underline,
     ],
-    immediatelyRender: true,
+    immediatelyRender: true, // true if client side rendering
   });
 
   return (

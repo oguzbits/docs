@@ -185,7 +185,10 @@ export const Navbar = ({ data }: NavbarProps) => {
                     </MenubarItem>
                   </RenameDialog>
 
-                  <RemoveDialog documentId={data._id}>
+                  <RemoveDialog
+                    documentId={data._id}
+                    onSuccess={() => router.push("/")}
+                  >
                     <MenubarItem
                       onClick={(e) => e.stopPropagation()}
                       onSelect={(e) => e.preventDefault()}

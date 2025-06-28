@@ -17,7 +17,7 @@ interface DocumentProps {
 export const Document = ({ preloadedDocument, roomId }: DocumentProps) => {
   const document = usePreloadedQuery(preloadedDocument);
 
-  console.log({ document });
+  if (document === null) return null;
 
   return (
     <Room roomId={roomId}>

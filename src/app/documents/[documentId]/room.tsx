@@ -74,7 +74,6 @@ export const Room = ({ children, roomId }: PropsWithChildren<RoomProps>) => {
       resolveRoomsInfo={async ({ roomIds }) => {
         const documents = await getDocuments(roomIds as Id<"documents">[]);
 
-        console.log("documents___: ", documents);
         return documents.map((document) => ({
           id: document.id,
           name: document.name,
