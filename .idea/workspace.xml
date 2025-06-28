@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor `RemoveDialog` to use `useRouter` for navigation and clean up redundant props.&#10;&#10;- Remove the `onSuccess` callback in `RemoveDialog` and replace it with direct navigation using `useRouter`.&#10;- Update `navbar.tsx` to align with the refactored `RemoveDialog` API.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convex/documents.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/documents.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/threads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/threads.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -130,7 +132,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="64347000" />
+      <workItem from="1750975544685" duration="67772000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -284,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751145173524</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant.">
+      <option name="closed" value="true" />
+      <created>1751146600557</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1751146600557</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +331,8 @@
     <MESSAGE value="Refactor Convex handlers and improve document creation flow.&#10;&#10;- Use object destructuring for Convex handler arguments for consistency.&#10;- Simplify document manipulation logic in `documents.ts`.&#10;- Add toast notification for successful document creation in `template-gallery.tsx`.&#10;- Enable immediate rendering in the editor for better UX.&#10;- Add debugging `console.log` statements in document components for troubleshooting." />
     <MESSAGE value="Remove redundant `console.log` statements and improve component implementations.&#10;&#10;- Remove debugging `console.log` statements from multiple components.&#10;- Refactor `RemoveDialog` to support callback on success instead of direct navigation.&#10;- Simplify conditional rendering in `Document` component.&#10;- Adjust code comments for clarity and context." />
     <MESSAGE value="Refactor `RemoveDialog` to use `useRouter` for navigation and clean up redundant props.&#10;&#10;- Remove the `onSuccess` callback in `RemoveDialog` and replace it with direct navigation using `useRouter`.&#10;- Update `navbar.tsx` to align with the refactored `RemoveDialog` API." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `RemoveDialog` to use `useRouter` for navigation and clean up redundant props.&#10;&#10;- Remove the `onSuccess` callback in `RemoveDialog` and replace it with direct navigation using `useRouter`.&#10;- Update `navbar.tsx` to align with the refactored `RemoveDialog` API." />
+    <MESSAGE value="Refactor `documents.ts` to use constants for table names and improve defaults.&#10;&#10;- Replace hardcoded table name strings with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` during document creation to prevent undefined entries." />
+    <MESSAGE value="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant." />
   </component>
 </project>

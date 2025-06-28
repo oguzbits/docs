@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  useLiveblocksExtension,
-  FloatingToolbar,
-} from "@liveblocks/react-tiptap";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 import { useStorage } from "@liveblocks/react/suspense";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
@@ -128,7 +125,6 @@ export const Editor = ({ initialContent }: EditorProps) => {
       >
         <EditorContent editor={editor} />
         <Threads editor={editor} />
-        <FloatingToolbar editor={editor} />
       </div>
     </div>
   );

@@ -24,8 +24,9 @@ export async function POST(req: NextRequest) {
 
   const isOwner = document.ownerId === user.id;
   const isOrganizationMember = !!(
+    document.organizationId &&
     // @ts-ignore
-    (document.organizationId && document.organizationId === sessionClaims.o.id)
+    document.organizationId === sessionClaims?.o?.id
   );
 
   if (!isOwner && !isOrganizationMember)
