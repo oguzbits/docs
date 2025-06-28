@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-toast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-toast.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +133,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="68099000" />
+      <workItem from="1750975544685" duration="70052000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -296,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751149781101</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly.">
+      <option name="closed" value="true" />
+      <created>1751150220567</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1751150220567</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +352,7 @@
     <MESSAGE value="Refactor `documents.ts` to use constant for table name and improve default values&#10;&#10;- Replace hardcoded table name with `DOCUMENTS_TABLE` constant for consistency.&#10;- Set default value for `initialContent` to an empty string.&#10;- Update all queries and mutations in `documents.ts` to use the `DOCUMENTS_TABLE` constant." />
     <MESSAGE value="Refactor document-related components and enhance real-time collaboration features&#10;&#10;- Update `actions.ts` to improve organization ID handling in Clerk user list fetch.&#10;- Enhance `threads.tsx` with `ClientSideSuspense` for better loading states and modularize `ThreadsList`.&#10;- Simplify `editor.tsx` by removing unused `FloatingToolbar` and cleaning up imports." />
     <MESSAGE value="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
+    <MESSAGE value="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly." />
   </component>
 </project>

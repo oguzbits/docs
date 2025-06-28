@@ -23,11 +23,10 @@ export async function POST(req: NextRequest) {
   if (!document) return new NextResponse("Unauthorized!", { status: 401 });
 
   const isOwner = document.ownerId === user.id;
-  const isOrganizationMember = !!(
+  const isOrganizationMember =
     document.organizationId &&
-    // @ts-ignore
-    document.organizationId === sessionClaims?.o?.id
-  );
+    // @ts-expect-error Used sessionClaims?.o?.id instead of sessionClaims?.org_id
+    document.organizationId === sessionClaims?.o?.id;
 
   if (!isOwner && !isOrganizationMember)
     return new NextResponse("Unauthorized!", { status: 401 });

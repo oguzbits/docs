@@ -16,9 +16,9 @@ export async function getUsers() {
   const { sessionClaims } = await auth();
   const clerk = await clerkClient();
 
-  // @ts-ignore
+  // @ts-expect-error Used sessionClaims?.o?.id instead of sessionClaims?.org_id
   const organizationId = sessionClaims?.o?.id
-    ? // @ts-ignore
+    ? // @ts-expect-error Used sessionClaims?.o?.id instead of sessionClaims?.org_id
       [sessionClaims.o.id]
     : undefined;
   const response = await clerk.users.getUserList({
