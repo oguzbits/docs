@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/liveblocks-auth/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-toast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-toast.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="70052000" />
+      <workItem from="1750975544685" duration="71088000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -311,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751150220567</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props).">
+      <option name="closed" value="true" />
+      <created>1751152114478</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1751152114478</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +356,7 @@
     <MESSAGE value="Refactor document-related components and enhance real-time collaboration features&#10;&#10;- Update `actions.ts` to improve organization ID handling in Clerk user list fetch.&#10;- Enhance `threads.tsx` with `ClientSideSuspense` for better loading states and modularize `ThreadsList`.&#10;- Simplify `editor.tsx` by removing unused `FloatingToolbar` and cleaning up imports." />
     <MESSAGE value="Refactor various document components and improve Liveblocks integration&#10;&#10;- Update `actions.ts` and `liveblocks-auth/route.ts` to enhance organization ID handling with proper fallback and cleaner syntax.&#10;- Replace `Threads` implementation with `ClientSideSuspense` to improve rendering in `threads.tsx`.&#10;- Refactor `editor.tsx` by removing unused `FloatingToolbar` for a leaner UI." />
     <MESSAGE value="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly." />
+    <MESSAGE value="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props)." />
   </component>
 </project>
