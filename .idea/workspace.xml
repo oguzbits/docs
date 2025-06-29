@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Add new icons and update `.idea/workspace.xml` configuration&#10;&#10;- Introduce new SVG and PNG icons (`icon0.svg`, `icon1.png`, `apple-icon.png`, `favicon.ico`) for project assets.&#10;- Update `.idea/workspace.xml` to reflect task adjustments and duration changes.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/remove-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/remove-dialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +131,7 @@
       <workItem from="1750932915171" duration="1479000" />
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
-      <workItem from="1750975544685" duration="73831000" />
+      <workItem from="1750975544685" duration="75584000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -325,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751154237356</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering.">
+      <option name="closed" value="true" />
+      <created>1751156158858</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1751156158858</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add UI primitive components with Radix UI and custom styles." />
     <MESSAGE value="Enhance project setup with Prettier, ESLint, and TailwindCSS configurations. Optimize imports and improve formatting across components." />
     <MESSAGE value="Integrate TipTap editor into document page and simplify DocumentsLayout structure. Add TipTap dependencies." />
     <MESSAGE value="Update TipTap editor implementation with additional extensions and improved table handling.&#10;&#10;- Add new TipTap extensions (Image, Table, TaskList, and resize capabilities).&#10;- Update dependencies for TipTap-related packages in `package.json` and `package-lock.json`." />
@@ -368,6 +375,7 @@
     <MESSAGE value="Remove `Chart` component and related utilities&#10;&#10;- Delete `src/components/ui/chart.tsx` and its dependencies as it is no longer used or required.&#10;- Update `.idea/workspace.xml` to remove references and adjust tasks accordingly." />
     <MESSAGE value="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props)." />
     <MESSAGE value="Add new icons and update `.idea/workspace.xml` configuration&#10;&#10;- Introduce new SVG and PNG icons (`icon0.svg`, `icon1.png`, `apple-icon.png`, `favicon.ico`) for project assets.&#10;- Update `.idea/workspace.xml` to reflect task adjustments and duration changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new icons and update `.idea/workspace.xml` configuration&#10;&#10;- Introduce new SVG and PNG icons (`icon0.svg`, `icon1.png`, `apple-icon.png`, `favicon.ico`) for project assets.&#10;- Update `.idea/workspace.xml` to reflect task adjustments and duration changes." />
+    <MESSAGE value="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering." />
+    <option name="LAST_COMMIT_MESSAGE" value="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering." />
   </component>
 </project>

@@ -60,15 +60,18 @@ export const RemoveDialog = ({
               setIsRemoving(true);
 
               remove({ id: documentId })
-                .then(() => router.push("/"))
+                .then(() => {
+                  router.push("/");
+                  setIsRemoving(false);
+                })
                 .catch((error) => {
                   const errorMessage =
                     error instanceof ConvexError
                       ? error.data
                       : "Something went wrong!";
                   toast.error(errorMessage);
-                })
-                .finally(() => setIsRemoving(false));
+                  setIsRemoving(false);
+                });
             }}
           >
             Delete

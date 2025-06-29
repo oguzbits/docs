@@ -1,5 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { preloadQuery } from "convex/nextjs";
+import { redirect } from "next/navigation";
 
 import type { Id } from "@/../convex/_generated/dataModel";
 
@@ -23,6 +24,11 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
     { id: documentId },
     { token },
   );
+
+  // Check if the document exists. If not, redirect to the homepage.
+  if (!preloadedDocument?._valueJSON) {
+    redirect("/");
+  }
 
   return <Document preloadedDocument={preloadedDocument} roomId={documentId} />;
 };
