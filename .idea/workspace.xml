@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/remove-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/remove-dialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.Next.js: server-side.executor": "Debug",
     "prettierjs.PrettierConfiguration.Package": "/Users/oguz/Desktop/dev/docs/node_modules/prettier",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
     "ts.external.directory.path": "/Users/oguz/Desktop/dev/docs/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
