@@ -8,6 +8,8 @@ import { Editor } from "./editor";
 import { Navbar } from "./navbar";
 import { Room } from "./room";
 import { Toolbar } from "./toolbar";
+import { FullscreenLoader } from "@/components/fullscreen-loader";
+import { ClientSideSuspense } from "@liveblocks/react/suspense";
 
 interface DocumentProps {
   preloadedDocument: Preloaded<typeof api.documents.getById>;
@@ -28,7 +30,11 @@ export const Document = ({ preloadedDocument, roomId }: DocumentProps) => {
         </div>
 
         <div className="pt-[114px] print:pt-0">
-          <Editor initialContent={document.initialContent} />
+          <ClientSideSuspense
+            fallback={<FullscreenLoader label="Loading Document..." />}
+          >
+            <Editor initialContent={document.initialContent} />
+          </ClientSideSuspense>
         </div>
       </div>
     </Room>
