@@ -112,7 +112,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
       TextStyle,
       Underline,
     ],
-    immediatelyRender: true, // true if client side rendering
+    immediatelyRender: false, // true if client side rendering
   });
 
   return (
