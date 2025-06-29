@@ -34,3 +34,17 @@ export async function getUsers() {
 
   return users;
 }
+
+export const removeRoom = async (documentId: string, appUrl: string) => {
+  try {
+    await fetch(`${appUrl}/api/liveblocks-room-remove`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ roomId: documentId }),
+    });
+  } catch (error) {
+    console.error("Failed to remove room:", error);
+  }
+};

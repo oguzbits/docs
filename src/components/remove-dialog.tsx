@@ -8,6 +8,7 @@ import { toast } from "sonner";
 
 import { api } from "@/../convex/_generated/api";
 import type { Id } from "@/../convex/_generated/dataModel";
+import { removeRoom } from "@/app/documents/[documentId]/actions";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -60,9 +61,10 @@ export const RemoveDialog = ({
               setIsRemoving(true);
 
               remove({ id: documentId })
-                .then(() => {
+                .then(async () => {
                   router.push("/");
                   setIsRemoving(false);
+                  await removeRoom(documentId, window.location.origin);
                 })
                 .catch((error) => {
                   const errorMessage =
