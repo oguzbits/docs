@@ -44,6 +44,9 @@ export const Editor = ({ initialContent }: EditorProps) => {
   const editor = useEditor({
     onCreate: ({ editor }) => {
       editor?.commands.setFontFamily("Arial");
+      if (initialContent && editor.isEmpty) {
+        editor?.commands.setContent(initialContent);
+      }
       setEditor(editor);
     },
     onUpdate: ({ editor }) => {

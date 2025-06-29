@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Remove `ClientSideSuspense` wrapper from `Ruler` component in `editor.tsx` for simplified rendering.">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Update dependencies and cleanup ESLint configuration&#10;&#10;- Upgrade `@liveblocks` packages to `3.0.0` and `@tiptap` extensions to `2.23.0`.&#10;- Remove `eslint-config-standard` for streamlined configurations.&#10;- Adjust `.idea/workspace.xml` for updated file tracking and properties.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751207796101</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update dependencies and cleanup ESLint configuration&#10;&#10;- Upgrade `@liveblocks` packages to `3.0.0` and `@tiptap` extensions to `2.23.0`.&#10;- Remove `eslint-config-standard` for streamlined configurations.&#10;- Adjust `.idea/workspace.xml` for updated file tracking and properties.">
+      <option name="closed" value="true" />
+      <created>1751239742299</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1751239742299</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,8 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add save functionality for JSON, HTML, and Text formats in Navbar.&#10;&#10;- Implement export handlers for JSON, HTML, and Text from the editor.&#10;- Update Navbar menu items to trigger respective save actions." />
-    <MESSAGE value="Remove unused hooks and SVG assets, add new assets and components for document templates.&#10;&#10;- Delete unused `use-mobile.tsx`, `use-toast.ts`, and old SVG assets.&#10;- Add new SVG assets for document templates: `software-proposal.svg`, `resume.svg`.&#10;- Create `Navbar` component under `src/app/(home)` for enhanced navigation." />
     <MESSAGE value="Integrate document management functionalities with Convex backend and UI components.&#10;&#10;- Implement `DocumentsTable` and `DocumentRow` components to list documents.&#10;- Add `RenameDialog` and `RemoveDialog` components for document renaming and deletion.&#10;- Create dropdown menu for document actions, including open in a new tab.&#10;- Set up Convex queries and mutations for document CRUD operations.&#10;- Configure Clerk authentication middleware and integrate `UserButton` in Navbar." />
     <MESSAGE value="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation." />
     <MESSAGE value="Enhance document page with Convex integration and improved UI functionality.&#10;&#10;- Add Convex preloaded queries for fetching document data.&#10;- Implement updated document title editing with debounced updates and error handling.&#10;- Integrate `Navbar` with rename and delete dialogs for document management.&#10;- Include `OrganizationSwitcher` in Navbar for organization selection.&#10;- Replace inline components with modular imports for better readability and structure." />
@@ -416,6 +420,8 @@
     <MESSAGE value="Remove `DocumentsLayout` and `DocumentsPage` components and wrap `Ruler` in `ClientSideSuspense` to improve rendering." />
     <MESSAGE value="Add API route and integration to remove Liveblocks rooms&#10;&#10;- Create `/api/liveblocks-room-remove/route.ts` for handling room deletions via POST requests.&#10;- Integrate `removeRoom` utility in `actions.ts` and `remove-dialog.tsx` for consistent room removal logic.&#10;- Update `RemoveDialog` to ensure Liveblocks room deletion when a document is removed." />
     <MESSAGE value="Remove `ClientSideSuspense` wrapper from `Ruler` component in `editor.tsx` for simplified rendering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove `ClientSideSuspense` wrapper from `Ruler` component in `editor.tsx` for simplified rendering." />
+    <MESSAGE value="Wrap `Editor` component in `ClientSideSuspense` in `[documentId]/document.tsx` for improved loading fallback." />
+    <MESSAGE value="Update dependencies and cleanup ESLint configuration&#10;&#10;- Upgrade `@liveblocks` packages to `3.0.0` and `@tiptap` extensions to `2.23.0`.&#10;- Remove `eslint-config-standard` for streamlined configurations.&#10;- Adjust `.idea/workspace.xml` for updated file tracking and properties." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update dependencies and cleanup ESLint configuration&#10;&#10;- Upgrade `@liveblocks` packages to `3.0.0` and `@tiptap` extensions to `2.23.0`.&#10;- Remove `eslint-config-standard` for streamlined configurations.&#10;- Adjust `.idea/workspace.xml` for updated file tracking and properties." />
   </component>
 </project>
