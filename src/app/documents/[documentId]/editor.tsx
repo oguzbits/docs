@@ -5,7 +5,6 @@ import { useStorage } from "@liveblocks/react/suspense";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
-import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
@@ -82,10 +81,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
       FontFamily,
       FontSizeExtension,
       Highlight.configure({ multicolor: true }),
-      Image.extend({
-        name: "image-editor",
-      }),
-      ImageResize,
+      ImageResize, // includes Image Extension
       LineHeightExtension,
       Link.configure({
         openOnClick: false,

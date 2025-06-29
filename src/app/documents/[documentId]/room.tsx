@@ -5,7 +5,13 @@ import {
   LiveblocksProvider,
   RoomProvider,
 } from "@liveblocks/react/suspense";
-import { type PropsWithChildren, useEffect, useMemo, useState } from "react";
+import {
+  type PropsWithChildren,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { toast } from "sonner";
 
 import type { Id } from "@/../convex/_generated/dataModel";
@@ -41,6 +47,30 @@ export const Room = ({ children, roomId }: PropsWithChildren<RoomProps>) => {
     fetchUsers();
   }, [fetchUsers]);
 
+  const resolveUsers = useCallback(
+    ({ userIds }: { userIds: string[] }) => {
+      return userIds.map(
+        (userId) => users.find((user) => user.id === userId) ?? undefined,
+      );
+    },
+    [users],
+  );
+
+  const resolveMentionSuggestions = useCallback(
+    ({ text }: { text: string }) => {
+      let filteredUsers = users;
+
+      if (text) {
+        filteredUsers = users.filter((user) =>
+          user.name.toLowerCase().includes(text.toLowerCase()),
+        );
+      }
+
+      return filteredUsers.map((user) => user.id);
+    },
+    [users],
+  );
+
   return (
     <LiveblocksProvider
       authEndpoint={async () => {
@@ -55,22 +85,8 @@ export const Room = ({ children, roomId }: PropsWithChildren<RoomProps>) => {
         return await response.json();
       }}
       throttle={16}
-      resolveUsers={({ userIds }) => {
-        return userIds.map(
-          (userId) => users.find((user) => user.id === userId) ?? undefined,
-        );
-      }}
-      resolveMentionSuggestions={({ text }) => {
-        let filteredUsers = users;
-
-        if (text) {
-          filteredUsers = users.filter((user) =>
-            user.name.toLowerCase().includes(text.toLowerCase()),
-          );
-        }
-
-        return filteredUsers.map((user) => user.id);
-      }}
+      resolveUsers={resolveUsers}
+      resolveMentionSuggestions={resolveMentionSuggestions}
       resolveRoomsInfo={async ({ roomIds }) => {
         const documents = await getDocuments(roomIds as Id<"documents">[]);
 

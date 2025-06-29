@@ -85,19 +85,17 @@ export const get = query({
 export const getByIds = query({
   args: { ids: v.array(v.id(DOCUMENTS_TABLE)) },
   handler: async (ctx, { ids }) => {
-    const documents = [];
+    const documents = await Promise.all(
+      ids.map((id) => ctx.db.get(id))
+    );
 
-    for (const id of ids) {
-      const document = await ctx.db.get(id);
-
+    return documents.map((document, index) => {
       if (document) {
-        documents.push({ id: document._id, name: document.title });
+        return { id: document._id, name: document.title };
       } else {
-        documents.push({ id, name: "[Removed]" });
+        return { id: ids[index], name: "[Removed]" };
       }
-    }
-
-    return documents;
+    });
   },
 });
 

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering.">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="fix template gallery for viewport between 1024px and 1279px">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convex/documents.ts" beforeDir="false" afterPath="$PROJECT_DIR$/convex/documents.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/room.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/room.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751156158858</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix template gallery for viewport between 1024px and 1279px">
+      <option name="closed" value="true" />
+      <created>1751193105428</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1751193105428</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,8 +359,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Enhance project setup with Prettier, ESLint, and TailwindCSS configurations. Optimize imports and improve formatting across components." />
-    <MESSAGE value="Integrate TipTap editor into document page and simplify DocumentsLayout structure. Add TipTap dependencies." />
     <MESSAGE value="Update TipTap editor implementation with additional extensions and improved table handling.&#10;&#10;- Add new TipTap extensions (Image, Table, TaskList, and resize capabilities).&#10;- Update dependencies for TipTap-related packages in `package.json` and `package-lock.json`." />
     <MESSAGE value="Add Toolbar and extensions for advanced text styling in TipTap editor.&#10;&#10;- Implement `Toolbar` with buttons for text formatting, alignment, and other actions.&#10;- Introduce `font-size` and `line-height` extensions for enhanced text customization.&#10;- Integrate `Toolbar` into the document page." />
     <MESSAGE value="Add Ruler component for adjustable margins in TipTap editor.&#10;&#10;- Implement `Ruler` for visual margin adjustment via draggable markers.&#10;- Integrate `Ruler` into the editor interface.&#10;- Update dependencies to include `react-icons` for marker icons." />
@@ -373,6 +382,8 @@
     <MESSAGE value="Refactor organization ID handling and eslint configuration&#10;&#10;- Replace `@ts-ignore` with `@ts-expect-error` in `actions.ts` and `liveblocks-auth/route.ts` for stricter error handling.&#10;- Add `eslint-config-standard` and related dependencies to improve code style enforcement.&#10;- Minor cleanup in `use-toast.ts` (`eslint-disable` adjustments, removed redundant props)." />
     <MESSAGE value="Add new icons and update `.idea/workspace.xml` configuration&#10;&#10;- Introduce new SVG and PNG icons (`icon0.svg`, `icon1.png`, `apple-icon.png`, `favicon.ico`) for project assets.&#10;- Update `.idea/workspace.xml` to reflect task adjustments and duration changes." />
     <MESSAGE value="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Downgrade dependencies for Liveblocks and TipTap extensions&#10;&#10;- Update `@liveblocks` packages to version `2.12.2` for compatibility.&#10;- Update `@tiptap` extensions to version `2.10.2` for alignment.&#10;- Adjust `.idea/workspace.xml` configuration to reflect changes.&#10;- Set `immediatelyRender` to `false` in `editor.tsx` to optimize client-side rendering." />
+    <MESSAGE value="Add redirect for non-existent documents and improve `RemoveDialog` error handling&#10;&#10;- Redirect users to the homepage if a document does not exist in `[documentId]/page.tsx`.&#10;- Fix `RemoveDialog` to properly reset `isRemoving` state on failures." />
+    <MESSAGE value="fix template gallery for viewport between 1024px and 1279px" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix template gallery for viewport between 1024px and 1279px" />
   </component>
 </project>
