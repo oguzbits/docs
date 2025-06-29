@@ -1,7 +1,7 @@
 "use client";
 
 import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
-import { ClientSideSuspense, useStorage } from "@liveblocks/react/suspense";
+import { useStorage } from "@liveblocks/react/suspense";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
@@ -113,9 +113,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
 
   return (
     <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:overflow-visible print:bg-white print:p-0">
-      <ClientSideSuspense fallback={null}>
-        <Ruler />
-      </ClientSideSuspense>
+      <Ruler />
 
       <div
         className="mx-auto flex min-w-max justify-center py-4 print:w-full print:min-w-0 print:py-0"
