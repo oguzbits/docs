@@ -10,6 +10,10 @@ import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 
+// tiptap styles
+import "@/styles/_keyframe-animations.scss";
+import "@/styles/_variables.scss";
+// ~
 import "./globals.css";
 
 const inter = Inter({
