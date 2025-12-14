@@ -1,7 +1,5 @@
 "use client";
 
-import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
-import { useStorage } from "@liveblocks/react/suspense";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
@@ -17,118 +15,85 @@ import TaskList from "@tiptap/extension-task-list";
 import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
-import { EditorContent, useEditor } from "@tiptap/react";
+import { EditorContent, EditorContext, useEditor } from "@tiptap/react";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
+import Document from "@tiptap/extension-document";
+
+import { Navbar } from "./navbar";
+import { Toolbar } from "./toolbar";
 import StarterKit from "@tiptap/starter-kit";
 import ImageResize from "tiptap-extension-resize-image";
 
 import { editorMargin, editorWidth } from "@/config/editor";
 import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
-import { useEditorStore } from "@/store/use-editor-store";
-
-import { Ruler } from "./ruler";
-import { Threads } from "./threads";
+import { Doc } from "../../../../convex/_generated/dataModel";
 
 interface EditorProps {
   initialContent?: string;
+  data: Doc<"documents">;
 }
 
-export const Editor = ({ initialContent }: EditorProps) => {
-  const liveblocks = useLiveblocksExtension({
-    initialContent,
-    offlineSupport_experimental: true,
-  });
-  const { setEditor } = useEditorStore();
-
-  const leftMargin = useStorage((root) => root.leftMargin);
-  const rightMargin = useStorage((root) => root.rightMargin);
+export const Editor = ({ initialContent, data }: EditorProps) => {
+  const liveblocks = useLiveblocksExtension();
 
   const editor = useEditor({
+    content: initialContent,
     onCreate: ({ editor }) => {
       editor?.commands.setFontFamily("Arial");
       if (initialContent && editor.isEmpty) {
         editor?.commands.setContent(initialContent);
       }
-      setEditor(editor);
-    },
-    onUpdate: ({ editor }) => {
-      setEditor(editor);
-    },
-    onSelectionUpdate: ({ editor }) => {
-      setEditor(editor);
-    },
-    onTransaction: ({ editor }) => {
-      setEditor(editor);
-    },
-    onFocus: ({ editor }) => {
-      setEditor(editor);
-    },
-    onBlur: ({ editor }) => {
-      setEditor(editor);
-    },
-    onContentError: ({ editor }) => {
-      setEditor(editor);
-    },
-    onDestroy: () => {
-      setEditor(null);
     },
     autofocus: true,
     editorProps: {
       attributes: {
-        style: `width: ${editorWidth}px; padding-left: ${leftMargin ?? editorMargin}px; padding-right: ${rightMargin ?? editorMargin}px`,
+        style: `width: ${editorWidth}px; padding-left: ${editorMargin}px; padding-right: ${editorMargin}px`,
         class:
           "focus:outline-none print:border-0 bg-white border border-[#c7c7c7] flex flex-col min-h-[1054px] py-10 pr-14 cursor-text",
       },
     },
     extensions: [
       liveblocks,
-      Color,
-      FontFamily,
-      FontSizeExtension,
-      Highlight.configure({ multicolor: true }),
-      ImageResize, // includes Image Extension
+      StarterKit,
       LineHeightExtension,
+      FontSizeExtension,
+      TextAlign.configure({ types: ["heading", "paragraph"] }),
       Link.configure({
         openOnClick: false,
         autolink: true,
         defaultProtocol: "https",
       }),
-      StarterKit.configure({
-        // The Liveblocks extension comes with its own history handling
-        history: false,
-      }),
-      Superscript,
-      Subscript,
-      Table.configure({
-        resizable: true,
-      }),
-      TableRow,
-      TableHeader,
-      TableCell,
-      TaskItem.configure({
-        nested: true,
-      }),
-      TaskList,
-      TextAlign.configure({
-        types: ["heading", "paragraph"],
-      }),
+      Color,
+      Highlight.configure({ multicolor: true }),
+      FontFamily,
       TextStyle,
       Underline,
+      ImageResize,
+      Table,
+      TableCell,
+      TableHeader,
+      TableRow,
+      TaskItem.configure({ nested: true }),
+      TaskList,
+      Superscript,
+      Subscript,
     ],
     immediatelyRender: false, // true if client side rendering
   });
 
   return (
-    <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:overflow-visible print:bg-white print:p-0">
-      <Ruler />
+    <EditorContext.Provider value={{ editor }}>
+      <div className="min-h-screen bg-[#fafbfd]">
+        <div className="fixed inset-x-0 top-0 z-10 flex flex-col gap-y-2 bg-[#FAFBFD] px-4 pt-2 print:hidden">
+          <Navbar data={data} editor={editor} />
+          <Toolbar />
+        </div>
 
-      <div
-        className="mx-auto flex min-w-max justify-center py-4 print:w-full print:min-w-0 print:py-0"
-        style={{ width: `${editorWidth}px` }}
-      >
-        <EditorContent editor={editor} />
-        <Threads editor={editor} />
+        <div className="flex justify-center pt-[114px] print:pt-0">
+          <EditorContent editor={editor} />
+        </div>
       </div>
-    </div>
+    </EditorContext.Provider>
   );
 };

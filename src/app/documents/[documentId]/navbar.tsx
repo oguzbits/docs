@@ -43,19 +43,19 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { useEditorStore } from "@/store/use-editor-store";
 
 import { Avatars } from "./avatars";
 import { DocumentInput } from "./document-input";
 import { Inbox } from "./inbox";
+import { Editor } from "@tiptap/react";
 
 interface NavbarProps {
   data: Doc<"documents">;
+  editor: Editor | null;
 }
 
-export const Navbar = ({ data }: NavbarProps) => {
+export const Navbar = ({ data, editor }: NavbarProps) => {
   const router = useRouter();
-  const { editor } = useEditorStore();
 
   const create = useMutation(api.documents.create);
 

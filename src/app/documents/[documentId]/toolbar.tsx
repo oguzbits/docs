@@ -29,6 +29,7 @@ import {
   UploadIcon,
 } from "lucide-react";
 import { useState } from "react";
+import { useContext } from "react";
 import { type ColorResult, TwitterPicker } from "react-color";
 
 import { Button } from "@/components/ui/button";
@@ -48,10 +49,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { useEditorStore } from "@/store/use-editor-store";
+import { EditorContext } from "@tiptap/react";
 
 const LineHeightButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const lineHeights = [
     { label: "Default", value: "normal" },
@@ -89,7 +90,7 @@ const LineHeightButton = () => {
 };
 
 const FontSizeButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const currentSize = editor?.getAttributes("textStyle").fontSize;
   const currentFontSize = currentSize ? currentSize.replace("px", "") : "16";
@@ -177,7 +178,7 @@ const FontSizeButton = () => {
 };
 
 const ListButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const lists = [
     {
@@ -222,7 +223,7 @@ const ListButton = () => {
 };
 
 const AlignButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const alignments = [
     {
@@ -275,7 +276,7 @@ const AlignButton = () => {
 };
 
 const ImageButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
   const [imageUrl, setImageUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -357,7 +358,7 @@ const ImageButton = () => {
 };
 
 const LinkButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
   const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -408,7 +409,7 @@ const LinkButton = () => {
 };
 
 const HighlightColorButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const value = editor?.getAttributes("highlight").color as string;
 
@@ -432,7 +433,7 @@ const HighlightColorButton = () => {
 };
 
 const TextColorButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const value =
     (editor?.getAttributes("textStyle").color as string | undefined) ||
@@ -460,7 +461,7 @@ const TextColorButton = () => {
 };
 
 const HeadingLevelButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const headings = [
     { label: "Heading 1", value: 1, fontSize: "32px" },
@@ -518,7 +519,7 @@ const HeadingLevelButton = () => {
 };
 
 const FontFamilyButton = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const fonts = [
     { label: "Arial", value: "Arial" },
@@ -592,7 +593,7 @@ const ToolbarButton = ({
 };
 
 export const Toolbar = () => {
-  const { editor } = useEditorStore();
+  const { editor } = useContext(EditorContext);
 
   const sections: {
     label: string;

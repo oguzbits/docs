@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Set initial editor content if provided in `[documentId]/editor.tsx` during initialization">
+    <list default="true" id="68fdd3cc-bf71-45f0-acb6-51a366ecdcb2" name="Changes" comment="Add design updates: keyframe animations, variables, button styles, and new `BoldIcon`&#10;&#10;- Introduced keyframe animations in `_keyframe-animations.scss`.&#10;- Defined comprehensive design tokens in `_variables.scss` for enhanced consistency.&#10;- Added button component styling in `tiptap-ui-primitive/button/button.scss`.&#10;- Introduced reusable `BoldIcon` component in `tiptap-icons/bold-icon.tsx`.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/documents/[documentId]/toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/documents/[documentId]/toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Next.js: server-side.executor&quot;: &quot;Debug&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/oguz/Desktop/dev/docs/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/oguz/Desktop/dev/docs/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -134,6 +134,8 @@
       <workItem from="1750970326430" duration="50000" />
       <workItem from="1750970384091" duration="3421000" />
       <workItem from="1750975544685" duration="75584000" />
+      <workItem from="1751820963175" duration="125000" />
+      <workItem from="1753254579115" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Next.js project with Tailwind CSS, ESLint, and base configurations.">
       <option name="closed" value="true" />
@@ -391,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751240431413</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add design updates: keyframe animations, variables, button styles, and new `BoldIcon`&#10;&#10;- Introduced keyframe animations in `_keyframe-animations.scss`.&#10;- Defined comprehensive design tokens in `_variables.scss` for enhanced consistency.&#10;- Added button component styling in `tiptap-ui-primitive/button/button.scss`.&#10;- Introduced reusable `BoldIcon` component in `tiptap-icons/bold-icon.tsx`.">
+      <option name="closed" value="true" />
+      <created>1751399975684</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1751399975684</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +419,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Standardize string quotations and update alignment in various files.&#10;&#10;- Replace all single quotes with double quotes across `convex/auth.config.ts`, `convex/documents.ts`, and other components.&#10;- Adjust formatting and alignment for improved readability in files such as `navbar.tsx`, `template-gallery.tsx`, `search-input.tsx`. &#10;- Add error handling and navigation in `template-gallery.tsx` for better user experience during template creation." />
     <MESSAGE value="Enhance document page with Convex integration and improved UI functionality.&#10;&#10;- Add Convex preloaded queries for fetching document data.&#10;- Implement updated document title editing with debounced updates and error handling.&#10;- Integrate `Navbar` with rename and delete dialogs for document management.&#10;- Include `OrganizationSwitcher` in Navbar for organization selection.&#10;- Replace inline components with modular imports for better readability and structure." />
     <MESSAGE value="Update Navbar logo title styling.&#10;&#10;- Adjust font size and weight for improved accessibility and visual balance." />
     <MESSAGE value="Add generated Convex utilities and data model.&#10;&#10;- Include `api`, `server`, and `dataModel` autogenerated modules.&#10;- Provide type definitions and utilities for Convex queries, mutations, actions, and HTTP handling.&#10;- Add documentation for usage and regeneration instructions." />
@@ -434,6 +443,7 @@
     <MESSAGE value="Wrap `Editor` component in `ClientSideSuspense` in `[documentId]/document.tsx` for improved loading fallback." />
     <MESSAGE value="Update dependencies and cleanup ESLint configuration&#10;&#10;- Upgrade `@liveblocks` packages to `3.0.0` and `@tiptap` extensions to `2.23.0`.&#10;- Remove `eslint-config-standard` for streamlined configurations.&#10;- Adjust `.idea/workspace.xml` for updated file tracking and properties." />
     <MESSAGE value="Set initial editor content if provided in `[documentId]/editor.tsx` during initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set initial editor content if provided in `[documentId]/editor.tsx` during initialization" />
+    <MESSAGE value="Add design updates: keyframe animations, variables, button styles, and new `BoldIcon`&#10;&#10;- Introduced keyframe animations in `_keyframe-animations.scss`.&#10;- Defined comprehensive design tokens in `_variables.scss` for enhanced consistency.&#10;- Added button component styling in `tiptap-ui-primitive/button/button.scss`.&#10;- Introduced reusable `BoldIcon` component in `tiptap-icons/bold-icon.tsx`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add design updates: keyframe animations, variables, button styles, and new `BoldIcon`&#10;&#10;- Introduced keyframe animations in `_keyframe-animations.scss`.&#10;- Defined comprehensive design tokens in `_variables.scss` for enhanced consistency.&#10;- Added button component styling in `tiptap-ui-primitive/button/button.scss`.&#10;- Introduced reusable `BoldIcon` component in `tiptap-icons/bold-icon.tsx`." />
   </component>
 </project>
