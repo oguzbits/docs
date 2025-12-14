@@ -1,6 +1,8 @@
 "use client";
 
 import { Preloaded, usePreloadedQuery } from "convex/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import type { api } from "@/../convex/_generated/api";
 
@@ -15,6 +17,11 @@ interface DocumentProps {
 
 export const Document = ({ preloadedDocument, roomId }: DocumentProps) => {
   const document = usePreloadedQuery(preloadedDocument);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (document === null) router.push("/");
+  }, [document, router]);
 
   if (document === null) return null;
 
