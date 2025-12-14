@@ -17,7 +17,6 @@ import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
 import { EditorContent, EditorContext, useEditor } from "@tiptap/react";
 import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
-import Document from "@tiptap/extension-document";
 
 import { Navbar } from "./navbar";
 import { Toolbar } from "./toolbar";
@@ -41,9 +40,6 @@ export const Editor = ({ initialContent, data }: EditorProps) => {
     content: initialContent,
     onCreate: ({ editor }) => {
       editor?.commands.setFontFamily("Arial");
-      if (initialContent && editor.isEmpty) {
-        editor?.commands.setContent(initialContent);
-      }
     },
     autofocus: true,
     editorProps: {
