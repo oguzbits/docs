@@ -1,5 +1,6 @@
 "use client";
 
+import { useStatus } from "@liveblocks/react/suspense";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
@@ -27,6 +28,7 @@ import { editorMargin, editorWidth } from "@/config/editor";
 import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
 import { Doc } from "../../../../convex/_generated/dataModel";
+import { FullscreenLoader } from "@/components/fullscreen-loader";
 
 interface EditorProps {
   initialContent?: string;
@@ -34,6 +36,7 @@ interface EditorProps {
 }
 
 export const Editor = ({ initialContent, data }: EditorProps) => {
+  const status = useStatus();
   const liveblocks = useLiveblocksExtension();
 
   const editor = useEditor({
@@ -77,6 +80,10 @@ export const Editor = ({ initialContent, data }: EditorProps) => {
     ],
     immediatelyRender: false, // true if client side rendering
   });
+
+  if (status !== "connected") {
+    return <FullscreenLoader label="Connecting..." />;
+  }
 
   return (
     <EditorContext.Provider value={{ editor }}>
